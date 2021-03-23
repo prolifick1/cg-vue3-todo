@@ -1,12 +1,14 @@
 <template>
   <h1>vue3 todo app</h1>
+  <form action="">
+    <label for="">New Todo</label>
+    <input type="text" name="new todo" />
+    <button>Add New Todo</button>
+  </form>
 </template>
 
 <script>
-
-export default {
-
-}
+export default {};
 </script>
 
 <style>
@@ -17,5 +19,25 @@ body {
   font-size: 2em;
   width: 80%;
   margin: 0 auto;
+}
+input,
+textarea,
+button,
+p,
+div,
+section,
+article,
+select {
+  display: "block";
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 1em;
+  margin: 0.5em;
+}
+.todo {
+  cursor: pointer;
+}
+.done {
+  text-decoration: line-through;
 }
 </style>
