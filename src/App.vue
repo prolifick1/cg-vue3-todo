@@ -2,18 +2,22 @@
   <h1>vue3 todo app</h1>
   <form @submit.prevent="addNewTodo">
     <label for="">New Todo</label>
-    <input type="text" name="new todo" />
+    <input v-model="newTodo" type="text" name="new todo" />
     <button>Add New Todo</button>
   </form>
+  <h2>{{newTodo}}</h2>
 </template>
 
 <script>
+import { ref } from 'vue';
 export default {
   setup() {
+    const newTodo = ref('');
     function addNewTodo() {
       console.log(`form was submitted`);
     }
     return {
+      newTodo,
       addNewTodo,
     };
   },
