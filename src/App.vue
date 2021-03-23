@@ -1,6 +1,6 @@
 <template>
   <h1>vue3 todo app</h1>
-  <form action="">
+  <form @submit.prevent="addNewTodo">
     <label for="">New Todo</label>
     <input type="text" name="new todo" />
     <button>Add New Todo</button>
@@ -8,7 +8,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {
+    function addNewTodo() {
+      console.log(`form was submitted`);
+    }
+    return {
+      addNewTodo,
+    };
+  },
+};
 </script>
 
 <style>
